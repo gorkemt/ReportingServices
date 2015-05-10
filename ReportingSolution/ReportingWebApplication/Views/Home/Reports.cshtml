@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Reports";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+@foreach (var item in @ViewBag.ReportNames)
+{
+    <li>@item.Name</li>
+}
+<p>Use this area to provide additional information.</p>

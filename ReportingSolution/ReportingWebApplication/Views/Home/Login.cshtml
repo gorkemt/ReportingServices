@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "Login Page";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+<p>@ViewBag.Title</p>
+@using (Html.BeginForm("Reports", "Home", FormMethod.Post, null))
+{
+    @Html.Label("Username");
+    @Html.TextBox("Username");
+    @Html.Label("Password");
+    @Html.Password("Password")
+    ;
+    <input type="submit" value="Sign In">
+}
+<div>
+</div>
+</body>
+</html>
