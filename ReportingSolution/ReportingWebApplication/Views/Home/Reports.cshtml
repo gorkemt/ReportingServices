@@ -5,6 +5,13 @@
 <h3>@ViewBag.Message</h3>
 @foreach (var item in @ViewBag.ReportNames)
 {
-    <li>@item.Name</li>
+    if (@item.TypeName == "Report")
+    {
+        <li>@item.Name</li>
+    }
+    else if(@item.TypeName == "Folder")
+    {
+        <li><b>Folder: @item.Name</b></li>
+    }
 }
 <p>Use this area to provide additional information.</p>
